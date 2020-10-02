@@ -9,10 +9,6 @@ from os.path import expanduser, join
 from time import sleep
 
 
-DIRECTORY = expanduser("~")  # User's dir
-SLEEP_TIME = 10
-
-
 def hide_dotted(dir_path): 
     """
     Hides all files and directories in given path which name starts with dot.
@@ -24,6 +20,9 @@ def hide_dotted(dir_path):
 
 
 if __name__ == '__main__':
+    
+    DIRECTORY = expanduser("~")  # User's dir
+    SLEEP_TIME = 10
 
     while True:
         hide_dotted(DIRECTORY)
