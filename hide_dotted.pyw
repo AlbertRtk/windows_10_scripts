@@ -20,7 +20,7 @@ def hide_dotted(dir_path):
     :dir_path: path to parent directory
     """
     command = r'ATTRIB +H /d ' + join(dir_path, '.*')
-    subprocess.Popen(command)
+    subprocess.Popen(command, creationflags=subprocess.CREATE_NO_WINDOW)
 
 
 if __name__ == '__main__':
